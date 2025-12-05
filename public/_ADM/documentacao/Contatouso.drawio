@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2023-11-24T00:14:35.696Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="FPPZjktWXUYhooitP0C7" version="22.1.3" type="device">
+  <diagram name="Página-1" id="Jk06mTY1tInMBi8_YFa3">
+    <mxGraphModel dx="1434" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8M4f8UQg_9I8fhOfUOFT-1" value="Usuário&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="420" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8M4f8UQg_9I8fhOfUOFT-2" value="O usuário informa o nome, email, telefone e motivo de contato" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="430" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8M4f8UQg_9I8fhOfUOFT-3" value="O sistema processa as informações e envia um email para o gerente" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="430" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8M4f8UQg_9I8fhOfUOFT-6" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.567;exitY=0.767;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="8M4f8UQg_9I8fhOfUOFT-1" target="8M4f8UQg_9I8fhOfUOFT-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="100" y="464.5" as="sourcePoint" />
+            <mxPoint x="150" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8M4f8UQg_9I8fhOfUOFT-7" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8M4f8UQg_9I8fhOfUOFT-2" target="8M4f8UQg_9I8fhOfUOFT-3" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="300" y="464.5" as="sourcePoint" />
+            <mxPoint x="460" y="464.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

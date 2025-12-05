@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # A base é o diretório onde este .htaccess está
+    RewriteBase /street-style-main/public/
+
+    # Condições: Não reescrever se for um arquivo (como .css) ou um diretório
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Reescrever todo o resto para o index.php
+    # A regra ^(.*)$ pega "produtos" e envia para index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>

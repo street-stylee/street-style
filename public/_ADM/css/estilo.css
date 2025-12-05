@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-white: #fff;
+    --color-cinza1: #F0F5F9;
+    --color-cinza2: #C9D6DF;
+    --color-cinza3: #52616B;
+    --color-cinza4: #1E2022;
+}
+
+body{
+    min-height: 100vh;
+    max-height: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-cinza4);
+}
+
+.img_logo_header{
+    width: 250px;
+}
+
+.header,
+.navigation_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header{
+    background-color: var(--color-cinza1);
+    justify-content: space-between;
+    padding: 20px 5%;
+    height: 3.5em;
+    box-shadow: 1px 1px 4px var(--color-cinza4);
+}
+
+.navigation_header{
+    gap: 3em;
+    z-index: 2;
+}
+
+.navigation_header a{
+    text-decoration: none;
+    color: var(--color-cinza4);
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.navigation_header a:hover{
+    color: var(--color-cinza4);
+}
+
+.active:hover{
+    background: var(--color-cinza2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn_icon_header{
+    background: transparent;
+    border: none;
+    color: var(--color-cinza4);
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation_header{
+        position: absolute;
+        flex-direction: column !important;
+        top: 0;
+        background: var(--color-cinza3);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    .btn_icon_header{
+        display: block;
+    }
+}
+
+@keyframes showSidebar {
+    from {margin-left: -100vw;}
+    to {margin-left: -10vw;}
+}
+
+@font-face {
+    font-family: mont;
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: telegrafico;
+    src: url(../fontes/telegrafico.ttf);
+}
+
+hr{
+    text-align: right;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    float: left;
+}
+
+#header1{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.carrossel{
+    margin: 0 auto;
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 580px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+}
+
+.manual-navigation{
+    position: absolute;    
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 540px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+.logo{
+    margin-top: 20px;
+    width: 250px;
+    margin-left: 200px;
+}
+
+.links{
+    text-decoration: none;
+    font-family: mont;
+    font-size: 14px;
+    color: black;
+    margin-top: 100px;
+    margin-left: 20px;
+    font-family: telegrafico;
+    font-size: 18px;
+}
+
+.link{
+    margin-left: 67%;
+    margin-top: -58px;
+}
+
+#lk{
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+}

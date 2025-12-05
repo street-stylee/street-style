@@ -1,0 +1,231 @@
+:root {
+    --cor-principal: #3498db; 
+    --cor-secundaria: #34495e;
+    --cor-sucesso: #2ecc71;
+    --cor-alerta: #e74c3c;
+    --cor-fundo: #f8f8f8;
+}
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 120px auto 50px auto;
+    padding: 0 20px;
+}
+
+.checkout-container h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.checkout-content {
+    display: flex;
+    gap: 30px;
+}
+
+.checkout-main {
+    flex: 2;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-sidebar {
+    flex: 1;
+    background-color: var(--cor-fundo);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    align-self: flex-start;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    margin: 20px 0 15px 0;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-method-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.payment-method-item.selected {
+    border-color: var(--cor-principal);
+    background-color: #f7faff;
+    font-weight: 600;
+}
+
+.payment-method-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-method-item input[type="radio"] {
+    margin-right: 10px;
+    accent-color: var(--cor-principal);
+}
+
+.card-details {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+}
+
+.resumo-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.resumo-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.resumo-img img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.resumo-info {
+    flex-grow: 1;
+}
+
+.resumo-info p {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.resumo-info .item-nome {
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    font-size: 1em;
+}
+
+.resumo-valores {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+}
+
+.valor-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.valor-row span {
+    font-size: 1em;
+    color: #555;
+}
+
+.valor-row.total-final {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    margin-top: 15px;
+}
+
+.btn-concluir-compra {
+    background-color: var(--cor-sucesso);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.btn-concluir-compra:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .checkout-content {
+        flex-direction: column;
+    }
+    .checkout-main,
+    .checkout-sidebar {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .checkout-container {
+        margin-top: 100px;
+        padding: 0 10px;
+    }
+    .checkout-main,
+    .checkout-sidebar {
+        padding: 20px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
